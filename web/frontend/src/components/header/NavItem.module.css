@@ -1,0 +1,12 @@
+.nav_list_item {
+    margin: 0 20px;
+}
+
+.nav_list_item_content {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nav_list_item_content:hover {
+    color: #CA4D3C !important;
+}

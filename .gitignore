@@ -1,0 +1,15 @@
+.idea
+venv
+
+web/api/static
+
+# Frontend
+web/frontend/node_modules
+web/frontend/build
+web/frontend/coverage
+
+# NER model
+web/api/ner-model
+
+# Jupyter
+notebooks/.ipynb_checkpoints

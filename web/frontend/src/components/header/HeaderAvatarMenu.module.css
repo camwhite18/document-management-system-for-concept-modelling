@@ -1,0 +1,18 @@
+.avatar_button {
+    margin: 0 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.avatar_button:hover {
+    background-color: #CA4D3C !important;
+}
+
+.show {
+    background-color: transparent !important;
+}
+
+.dropdown_item:active {
+    background-color: #CA4D3C !important;
+}

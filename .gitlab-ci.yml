@@ -1,0 +1,30 @@
+stages:
+- test
+- lint
+- unit
+include:
+- template: Security/SAST.gitlab-ci.yml
+- template: Security/Dependency-Scanning.gitlab-ci.yml
+- template: Jobs/Secret-Detection.gitlab-ci.yml
+
+lint:
+    stage: lint
+    image: python:3.9
+    before_script:
+        - pip install -r ./web/requirements.txt
+    script:
+        - isort . --check-only
+        - black --check .
+        - find . -type f -name "*.py" | xargs pylint
+
+test-api:
+    stage: unit
+    before_script:
+        - make build
+    script: make test-api
+
+test-ui:
+    stage: unit
+    before_script:
+        - make build
+    script: make test-ui

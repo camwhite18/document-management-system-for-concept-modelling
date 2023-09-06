@@ -1,0 +1,28 @@
+.tree {
+    height: 100%;
+}
+
+.tree_item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0.2rem 0;
+}
+
+.tree_item > * {
+    flex-shrink: 0;
+    margin-right: 0.4rem;
+}
+
+.no_tree_data {
+    margin: 3rem;
+}
+
+.error_message {
+    margin: 3rem 1rem;
+    color: red;
+}
+
+.skeleton {
+    margin: 0 1rem;
+}

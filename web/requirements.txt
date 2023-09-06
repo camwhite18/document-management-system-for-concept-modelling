@@ -1,0 +1,17 @@
+Django==4.1.7
+gunicorn==20.1.0
+psycopg2-binary==2.9.5
+django-prometheus==2.2.0
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.2.2
+pyyaml==6.0
+coreapi==2.3.3
+django-admin-hstore-widget==1.2.1
+coverage==7.2.2
+celery==5.2.7
+redis==4.5.4
+spacy[transformers]==3.5.1
+isort==5.12.0
+black[jupyter]==23.3.0
+pylint==2.17.1
+django-extensions==3.2.1

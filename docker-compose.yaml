@@ -1,0 +1,64 @@
+version: "3.7"
+services:
+  web:
+    restart: always
+    build: ./web
+    links:
+      - postgres:postgres
+    expose:
+      - "8000"
+    volumes:
+      - web-django:/usr/src/app
+      - web-static:/home/api/static
+      - prom_data:/prometheus
+    env_file: .env
+    environment:
+      DEBUG: 'True'
+      PROMETHEUS_MULTIPROC_DIR: /prometheus
+    command: /home/entrypoint.sh
+
+  nginx:
+    restart: always
+    build: ./nginx/
+    ports:
+      - "80:80"
+    volumes:
+      - web-static:/home/api/static
+    links:
+      - web:web
+    depends_on:
+      - web
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    expose:
+      - "5432"
+    env_file:
+      - .env
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
+
+  redis:
+    image: redis:alpine
+    restart: always
+
+  celery:
+    restart: always
+    build: ./web
+    command: celery -A core worker -l info
+    volumes:
+      - web-django:/usr/src/app
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - redis
+      - web
+
+volumes:
+  web-django:
+  web-static:
+  prom_data:
+  pgdata:

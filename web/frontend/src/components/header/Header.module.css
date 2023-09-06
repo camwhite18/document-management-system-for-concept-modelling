@@ -1,0 +1,45 @@
+.header_container {
+    background-color: #312D2A;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_container {
+    display: flex;
+}
+
+.name_logo_container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.header_img {
+    height: 3rem;
+    margin: 5px;
+}
+
+.title_container {
+    display: flex;
+    margin: 0 20px;
+}
+
+.header_name_1 {
+    color: #CA4D3C;
+}
+
+.header_name_2 {
+    color: #FFFFFF;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.avatar_container {
+    display: flex;
+    align-items: center;
+}

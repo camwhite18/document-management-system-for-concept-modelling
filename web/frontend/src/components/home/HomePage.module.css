@@ -1,0 +1,15 @@
+.list_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list_item > * {
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.button_width {
+    width: 10rem;
+}

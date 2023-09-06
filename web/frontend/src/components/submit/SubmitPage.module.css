@@ -1,0 +1,46 @@
+.tabs > div {
+    height: 100%;
+    min-height: 38rem;
+    border-bottom: 1px solid #DEE2E6;
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    border-left: 1px solid #DEE2E6;
+    border-right: 1px solid #DEE2E6;
+    padding: 2rem;
+}
+
+.tab_title {
+    color: #919191;
+}
+
+.tab_title:hover {
+    color: #312D2A;
+}
+
+.form_input {
+    width: 25rem;
+}
+
+.form_textarea {
+    resize: none;
+    overflow-y: auto;
+}
+
+.submit_button {
+    width: 8rem;
+    margin-bottom: 1rem;
+}
+
+.error_message {
+    color: red;
+}
+
+.perms_input {
+    width: 50%;
+    margin-top: 0.5rem;
+}
+
+.hint_text {
+    color: #919191;
+    font-size: 0.75rem;
+}

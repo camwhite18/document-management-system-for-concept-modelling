@@ -1,0 +1,29 @@
+.center_container {
+    align-items: center;
+}
+
+.input_container {
+    width: 20rem
+}
+
+.form_label {
+    margin-right: 3rem;
+}
+
+.login_container {
+    display: flex;
+    justify-content: center;
+}
+
+.login_button {
+    width: 8rem;
+}
+
+.form_text {
+    margin-top: 3rem;
+}
+
+.error_message {
+    color: red;
+    margin-top: 1rem;
+}
